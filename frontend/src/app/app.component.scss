@@ -1,0 +1,11 @@
+.app {
+  height: 100%;
+  position: relative;
+  .exp-height {
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+  }
+}

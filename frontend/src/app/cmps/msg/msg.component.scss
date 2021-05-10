@@ -1,0 +1,46 @@
+@import "../../../assets/scss/setup/variables";
+
+:host {
+  display: flex;
+}
+
+.msg-container {
+  position: relative;
+  background-color: white;
+  margin-inline-start: 1rem;
+  display: inline-block;
+  border-radius: 18px;
+  max-width: 45ch;
+  .msg {
+    padding: 1rem 1.5rem;
+    .msg-body > *:not(:last-child) {
+      margin-inline-end: 1rem;
+    }
+  }
+  .msg-tip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-5%, 10%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    clip-path: polygon(51% 0, 0% 100%, 100% 39%);
+    z-index: -10;
+  }
+}
+
+.msg-container.self {
+  background-color: $self;
+  margin-left: auto;
+  margin-right: 1rem;
+  .msg-tip {
+    background-color: $self;
+    left: unset;
+    right: 0;
+    transform: translate(5%, 10%);
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(0 51%, 100% 100%, 51% 0);
+  }
+}

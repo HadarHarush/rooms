@@ -1,0 +1,57 @@
+<mat-card class="signup">
+  <form class="flex column" (submit)="onSubmit()">
+    <div class="img-container center-childs">
+      <img src="../../../assets/img/logo-small.jpg" alt="" />
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        name="username"
+        [(ngModel)]="username"
+        placeholder="hadar"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="hadar1"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Full Name</mat-label>
+      <input
+        matInput
+        type="password"
+        name="fullname"
+        [(ngModel)]="fullname"
+        placeholder="Mach-Patcha"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Mail</mat-label>
+      <input
+        matInput
+        type="email"
+        name="mail"
+        [(ngModel)]="mail"
+        placeholder="MachPatcha@gmail.com"
+      />
+    </mat-form-field>
+    <div class="buttons-bar flex">
+      <button mat-raised-button color="primary" class="center-childs">
+        <p *ngIf="!isLoading; else loading">Signup</p>
+        <ng-template #loading>
+          <loading></loading>
+        </ng-template>
+      </button>
+    </div>
+    <div class="change-auth-type">
+      <p>Already have an account? <a (click)="changeAuthType()">login</a></p>
+    </div>
+  </form>
+</mat-card>

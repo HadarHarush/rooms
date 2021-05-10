@@ -1,0 +1,28 @@
+<section *ngIf="chat; else chatPlaceholder" class="chat-details flex column">
+  <div class="chat-header">
+    <div class="main-container flex align-center">
+      <profile-img [imgUrl]="chat.imgUrl"></profile-img>
+      <div class="group">
+        <strong class="chat-name">#{{ chat.name }}</strong>
+        <p>{{ usersList }}</p>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="chat.msgs?.length; else msgsPlaceholder"
+    class="msg-list fg-1 main-container flex column"
+  >
+    <msg
+      *ngFor="let msg of chat.msgs; index as idx"
+      trackBy="trackByFn"
+      [msg]="msg"
+    ></msg>
+  </div>
+  <ng-template #msgsPlaceholder>
+    <main class="msgs-placeholder main-container">No msgs in this chat</main>
+  </ng-template>
+  <send-msg-bar [chat]="chat"></send-msg-bar>
+</section>
+<ng-template #chatPlaceholder>
+  <main class="chat-placeholder main-container">Loading...</main>
+</ng-template>

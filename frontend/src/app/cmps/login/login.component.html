@@ -1,0 +1,46 @@
+<mat-card class="login">
+  <form class="flex column" (submit)="onSubmit()">
+    <div class="img-container center-childs">
+      <img src="../../../assets/img/logo-small.jpg" alt="" />
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        name="username"
+        [(ngModel)]="username"
+        placeholder="hadar"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="hadar1"
+      />
+    </mat-form-field>
+    <div class="buttons-bar flex">
+      <button mat-raised-button color="primary" class="fg-1 center-childs">
+        <p *ngIf="!isLoading; else loading">Login</p>
+        <ng-template #loading>
+          <loading></loading>
+        </ng-template>
+      </button>
+      <button
+        class="fg-1"
+        mat-raised-button
+        color="accent"
+        type="button"
+        (click)="onGuest()"
+      >
+        Guest
+      </button>
+    </div>
+    <div class="change-auth-type">
+      <p>Not have An account? <a (click)="changeAuthType()">signup</a></p>
+    </div>
+  </form>
+</mat-card>

@@ -1,0 +1,27 @@
+@import "../../../assets/scss/setup/variables";
+:host:not(:last-child) {
+  border-bottom: 1px solid $dark-grey;
+}
+
+.chat-preview {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+  p {
+    margin: unset;
+    text-align: start;
+  }
+  .last-msg-container {
+    > * {
+      max-width: 16ch;
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+      max-height: 3.2em;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../../assets/scss/setup/variables";
+
+:host:not(:last-child) {
+  border-bottom: 1px solid $dark-grey;
+}
+
+.participation-preview {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+  p {
+    margin: unset;
+    text-align: start;
+  }
+  .group > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+}

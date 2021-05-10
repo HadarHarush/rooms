@@ -1,0 +1,17 @@
+@import "../../../assets/scss/setup/variables";
+
+.main-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  // margin-bottom: 30px;
+  .user-bar {
+    margin-inline-start: 1.5rem;
+    background-color: $dark-grey;
+    border-radius: 100px;
+    padding: 0.3rem;
+    > *:not(:last-child) {
+      margin-inline-end: 1rem;
+    }
+  }
+}

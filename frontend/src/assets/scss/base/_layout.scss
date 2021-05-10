@@ -1,0 +1,24 @@
+.main-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: auto;
+}
+
+@media (max-width: $break-wide) {
+  .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: $break-narrow) {
+  // .main-container {
+  //   width: 100%;
+  //   padding-left: unset;
+  //   padding-right: unset;
+  // }
+  // .main-box {
+  //   padding-left: 20px !important;
+  //   padding-right: 20px !important;
+  // }
+}

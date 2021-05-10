@@ -1,0 +1,12 @@
+<article class="msg-container {{ selfMsgClass }}">
+  <article class="msg flex column">
+    <div class="msg-header flex align-center">
+      <strong>{{ msg.from.username }}</strong>
+    </div>
+    <div class="msg-body flex align-center">
+      <p class="msg-txt">{{ msg.txt }}</p>
+      <p>{{ msg.createdAt | date: "short" }}</p>
+    </div>
+  </article>
+  <div class="msg-tip"></div>
+</article>

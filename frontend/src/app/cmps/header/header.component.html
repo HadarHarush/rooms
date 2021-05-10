@@ -1,0 +1,23 @@
+<header class="main-header">
+  <div class="main-container flex space-between align-center">
+    <a class="logo" [routerLink]="'/'">
+      <img src="../../../assets/img/logo-small.jpg" alt="Logo" />
+    </a>
+    <div class="buttons-box flex align-center">
+      <circle-button [routerLink]="'/chat/add'" routerLinkActive="active">
+        <img src="../../../assets/img/plus.svg" alt="" />
+      </circle-button>
+      <div class="user-bar flex space-between align-center">
+        <profile-img [imgUrl]="loggedInUser.profileImgUrl"></profile-img>
+        <circle-button>
+          <img
+            src="../../../assets/img/logout.svg"
+            alt="exit"
+            height="24"
+            (click)="onLogout()"
+          />
+        </circle-button>
+      </div>
+    </div>
+  </div>
+</header>

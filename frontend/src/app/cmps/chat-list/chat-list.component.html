@@ -1,0 +1,7 @@
+<div class="chat-list flex column">
+  <chat-preview
+    *ngFor="let chat of chats; index as idx"
+    trackBy="trackByFn"
+    [chat]="chat"
+  ></chat-preview>
+</div>

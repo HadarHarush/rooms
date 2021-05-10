@@ -1,0 +1,8 @@
+<div class="user-list">
+  <user-preview
+    *ngFor="let user of users; index as idx"
+    trackBy="trackByFn"
+    [user]="user"
+    (addParticipation)="onAddParticipation(user._id)"
+  ></user-preview>
+</div>

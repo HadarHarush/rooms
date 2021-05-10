@@ -1,0 +1,10 @@
+<section class="auth center-childs page">
+  <login
+    *ngIf="authType === 'login'"
+    (onChangeAuthType)="changeAuthType($event)"
+  ></login>
+  <signup
+    *ngIf="authType === 'signup'"
+    (onChangeAuthType)="changeAuthType($event)"
+  ></signup>
+</section>

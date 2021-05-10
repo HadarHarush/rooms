@@ -1,0 +1,13 @@
+<div
+  matRipple
+  class="chat-preview flex no-default-styles main-box"
+  [routerLink]="['/chat', chat._id]"
+>
+  <profile-img [imgUrl]="chat.imgUrl"></profile-img>
+
+  <div class="last-msg-container flex column fg-1">
+    <p>{{ chat.name }}</p>
+    <p>{{ lastMsg ? lastMsg.from.username + ": " + lastMsg.txt : "" }}</p>
+  </div>
+  <p>{{ chat.createdAt | date: "short" }}</p>
+</div>

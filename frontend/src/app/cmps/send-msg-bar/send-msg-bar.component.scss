@@ -1,0 +1,25 @@
+@import "../../../assets/scss/setup/variables";
+
+:host {
+  width: 100%;
+}
+
+.send-msg-bar {
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+  input {
+    background-color: $grey;
+    padding: 1rem 1rem;
+    border-radius: 100px;
+    outline: unset;
+    border: unset;
+    font-size: 16px;
+  }
+  .send-button path {
+    fill: $strong-dark-grey;
+  }
+}

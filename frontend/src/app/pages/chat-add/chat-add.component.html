@@ -1,0 +1,31 @@
+<section class="chat-add flex column">
+  <form (submit)="onAddChat()">
+    <div class="chat-config flex align-center main-box">
+      <profile-img [imgUrl]="imgUrl"></profile-img>
+      <mat-form-field class="example-full-width fg-1">
+        <input
+          matInput
+          name="name"
+          [(ngModel)]="name"
+          placeholder="Room name..."
+          required
+        />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Start Chat!</button>
+    </div>
+    <div class="participations flex column">
+      <h4 class="main-box">Participations:</h4>
+      <participation-preview
+        *ngFor="let participation of participations; index as idx"
+        trackBy="trackByFn"
+        [user]="participation"
+        (removeParticipation)="onRemoveParticipation($event)"
+      ></participation-preview>
+    </div>
+    <h4 class="main-box">Choose:</h4>
+    <user-list
+      [users]="usersToShow"
+      (addParticipation)="onAddParticipation($event)"
+    ></user-list>
+  </form>
+</section>

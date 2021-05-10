@@ -1,0 +1,6 @@
+.auth {
+  margin-top: 20px;
+  .buttons-bar > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+}

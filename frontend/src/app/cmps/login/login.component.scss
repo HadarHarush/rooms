@@ -1,0 +1,17 @@
+@import "../../../assets/scss/setup/variables";
+
+.login {
+  margin-top: 20px;
+  .buttons-bar > *:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+  .change-auth-type {
+    margin-top: 1rem;
+    > p {
+      font-size: 0.8rem;
+      > a {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+:host {
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+.chat-details {
+  height: 100%;
+
+  .chat-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    .main-container {
+      > *:not(:last-child) {
+        margin-inline-end: 1rem;
+      }
+    }
+    p {
+      margin: unset;
+      text-align: start;
+    }
+  }
+  .msg-list {
+    overflow-y: auto;
+    msg:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

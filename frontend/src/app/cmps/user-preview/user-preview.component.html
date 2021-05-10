@@ -1,0 +1,9 @@
+<article class="user-preview flex space-between align-center main-box">
+  <div class="group flex align-center">
+    <profile-img [imgUrl]="user.profileImgUrl"></profile-img>
+    <p>{{ user.username }}</p>
+  </div>
+  <circle-button (click)="onAddParticipation()">
+    <img src="../../../assets/img/plus.svg" alt="Add" />
+  </circle-button>
+</article>

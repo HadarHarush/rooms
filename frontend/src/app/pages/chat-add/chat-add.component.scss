@@ -1,0 +1,7 @@
+.chat-add {
+  form > .chat-config {
+    > *:not(:last-child) {
+      margin-inline-end: 1rem;
+    }
+  }
+}
